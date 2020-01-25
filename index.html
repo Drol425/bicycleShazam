@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="recorder.css"/>
+</head>
+<body>
+    
+        <div class="main-block">
+        <div class="controls">
+            <svg width="180" height="169" viewBox="0 0 200 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M164.771 107.135V65.3125C164.771 29.7733 135.802 0.859375 100.195 0.859375C64.5889 0.859375 35.6201 29.7733 35.6201 65.3125V107.08C15.5396 109.757 0 126.969 0 147.734C0 169.042 16.9586 188.75 41.4795 188.75H64.9658C68.2022 188.75 70.8252 186.127 70.8252 182.891V112.578C70.8252 109.342 68.2022 106.719 64.9658 106.719H47.3389V65.3125C47.3389 36.2354 71.051 12.5781 100.195 12.5781C129.341 12.5781 153.052 36.2354 153.052 65.3125V106.719H135.425C132.188 106.719 129.565 109.342 129.565 112.578V182.891C129.565 186.127 132.188 188.75 135.425 188.75H158.911C181.567 188.75 200 170.351 200 147.734C200 127.103 184.662 109.981 164.771 107.135ZM11.7188 147.734C11.7188 133.445 22.0306 121.518 35.6201 118.955V176.514C22.0306 173.951 11.7188 162.024 11.7188 147.734ZM59.1064 177.031H47.3389V118.438H59.1064V177.031ZM141.284 118.438H153.052V177.031H141.284V118.438ZM164.771 176.444V119.025C178.168 121.741 188.281 133.582 188.281 147.734C188.281 161.887 178.168 173.728 164.771 176.444Z" fill="white"/>
+            <path d="M113.795 142.177C110.725 141.152 107.407 142.809 106.381 145.877L106.056 146.854V112.188C106.056 109.311 103.967 106.859 101.128 106.403C98.2865 105.945 95.5353 107.617 94.632 110.349L82.8888 145.896C81.8741 148.969 83.5419 152.283 86.615 153.298C89.6881 154.312 93.0024 152.645 94.0171 149.572L94.3375 148.603V182.891C94.3375 186.135 96.9696 188.75 100.2 188.75C102.683 188.75 104.945 187.168 105.754 184.746L117.497 149.59C118.521 146.521 116.864 143.203 113.795 142.177Z" fill="#ffd900"/>
+            </svg>    
+            <!-- <button class="start">Start listening!</button> -->
+            <!-- <p class="listening">Listening...</p> -->
+                <input type="checkbox" id="speaker"></input>
+                <label for="speaker" class="background">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="50px" height="50px" viewBox="0 0 475.085 475.085" xml:space="preserve" class="microphone">
+                <g>	<g>
+                        <path d="M237.541,328.897c25.128,0,46.632-8.946,64.523-26.83c17.888-17.884,26.833-39.399,26.833-64.525V91.365
+                            c0-25.126-8.938-46.632-26.833-64.525C284.173,8.951,262.669,0,237.541,0c-25.125,0-46.632,8.951-64.524,26.84
+                            c-17.893,17.89-26.838,39.399-26.838,64.525v146.177c0,25.125,8.949,46.641,26.838,64.525
+                            C190.906,319.951,212.416,328.897,237.541,328.897z"/>
+                        <path d="M396.563,188.15c-3.606-3.617-7.898-5.426-12.847-5.426c-4.944,0-9.226,1.809-12.847,5.426
+                            c-3.613,3.616-5.421,7.898-5.421,12.845v36.547c0,35.214-12.518,65.333-37.548,90.362c-25.022,25.03-55.145,37.545-90.36,37.545
+                            c-35.214,0-65.334-12.515-90.365-37.545c-25.028-25.022-37.541-55.147-37.541-90.362v-36.547c0-4.947-1.809-9.229-5.424-12.845
+                            c-3.617-3.617-7.895-5.426-12.847-5.426c-4.952,0-9.235,1.809-12.85,5.426c-3.618,3.616-5.426,7.898-5.426,12.845v36.547
+                            c0,42.065,14.04,78.659,42.112,109.776c28.073,31.118,62.762,48.961,104.068,53.526v37.691h-73.089
+                            c-4.949,0-9.231,1.811-12.847,5.428c-3.617,3.614-5.426,7.898-5.426,12.847c0,4.941,1.809,9.233,5.426,12.847
+                            c3.616,3.614,7.898,5.428,12.847,5.428h182.719c4.948,0,9.236-1.813,12.847-5.428c3.621-3.613,5.431-7.905,5.431-12.847
+                            c0-4.948-1.81-9.232-5.431-12.847c-3.61-3.617-7.898-5.428-12.847-5.428h-73.08v-37.691
+                            c41.299-4.565,75.985-22.408,104.061-53.526c28.076-31.117,42.12-67.711,42.12-109.776v-36.547
+                            C401.998,196.049,400.185,191.77,396.563,188.15z"/>
+                    </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg>
+                <svg width="100px" height="100px" viewBox="0 0 100 100">
+                    <circle class="circle" cx="50" cy="50" r="46"/>
+                    <circle class="loader" cx="50" cy="50" r="46"/>
+                </svg>
+                <div class="dotWrapper">
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                </div>
+                </label>
+            <!-- <div class="divTextSearch">
+                <span class="entersong"><i class="fas fa-keyboard"></i></span>
+                <form id="songForm" method="GET">
+                    <input id="song" type="text" name="songName"/>
+                    <input id="textSong" type="submit" name="submit" value="Let's go"/>
+                </form>
+            </div> -->
+        </div>
+    </div>
+    <div id="results">
+        <h2 class="h2res">Okay, let's see what I found</h2>
+        <div class="loading">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="voice.js"></script>
+<script src="text.js"></script>
+</body>
+</html>
